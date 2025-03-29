@@ -18,6 +18,7 @@
 #define LCD_SETDDRAMADDR 0x80
 
 // LCD flags for display control
+
 #define LCD_DISPLAYON 0x04
 #define LCD_DISPLAYOFF 0x00
 #define LCD_CURSORON 0x02
@@ -61,7 +62,7 @@ ACS712 sensor(ACS712_05B, A0); //ACS712_20A for 20 Amp type
 // Variables to track energy consumption
 unsigned long previousMillis = 0;
 float energyConsumed = 0;  // in watt-hours
-float voltage = 230.0;     // AC voltage (modify if different in your region)
+float voltage = 230.0;     // AC voltage
 
 // Display state control
 enum DisplayState {POWER, CURRENT, ENERGY};
