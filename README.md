@@ -51,3 +51,7 @@ This project is a smart plug-based real-time energy monitoring system designed t
 - Integration with IoT platforms for remote monitoring and control.
 - Mobile app support for real-time data visualization.
 - AI-based analysis to predict and optimize energy consumption patterns.
+
+## Code Implementation
+We wrote the code at the register level using C++ to optimize performance and ensure efficient handling of microcontroller operations.
+
