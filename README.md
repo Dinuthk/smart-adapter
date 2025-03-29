@@ -13,6 +13,8 @@ Energy consumption is a critical concern in modern households, offices, and indu
 
 ## System Model
 ### Block Diagram
+![image](https://github.com/user-attachments/assets/c764730d-2acb-4883-9339-c246a1c33196)
+
 - **Current Measuring Sensor**: Uses ACS712 to monitor AC current in real-time.
 - **DC Power Supply**: Ensures stable operation of all components.
 - **Indicator System**: Provides visual feedback on system status.
