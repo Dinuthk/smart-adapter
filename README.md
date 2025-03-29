@@ -1,58 +1,52 @@
-# Smart Plug-Based Real-Time Energy Monitoring System
+# Smart Plug-Based Energy Monitoring System
 
-## Introduction
-Energy consumption is a critical concern in modern households, offices, and industrial environments. Traditional energy monitoring methods provide an overall view but lack detailed insights into individual appliance consumption. This project introduces a smart plug-based real-time energy monitoring system that offers accurate, appliance-level energy tracking, real-time insights, and remote control capabilities.
+## Description
+This project is a smart plug-based real-time energy monitoring system designed to help users track and optimize power consumption efficiently. The system enables plug-level energy monitoring, allowing users to identify inefficient devices and take corrective measures to minimize unnecessary power usage. 
 
 ## Features
-- **Real-time Energy Monitoring**: Tracks power consumption of individual appliances.
-- **Accurate Data Collection & Storage**: Maintains historical data for analysis and optimization.
-- **User-Friendly Display & Indicators**: Provides real-time feedback via LCD and LED indicators.
-- **Remote Accessibility**: Enables remote monitoring and control of connected appliances.
-- **Safety Enhancements**: Detects and prevents excessive power consumption with overload protection.
-- **Microcontroller-Based Processing**: Ensures efficient data handling and decision-making.
+- **Real-time Energy Monitoring**: Continuously tracks power consumption using sensors.
+- **AC Current Measurement**: Utilizes the ACS712 current sensor to measure real-time alternating current (AC) flow accurately.
+- **Voltage and Power Calculation**: Captures voltage levels and computes power usage.
+- **Microcontroller-Based Processing**: An ATMEGA328P microcontroller processes the sensor data and manages system operations.
+- **User-Friendly Display**: A 16x2 LCD shows real-time values of current, power, and energy consumption.
+- **LED Indicators**: Provides visual status updates for power on/off and overload warnings.
+- **Buzzer Alert**: Activates when an overcurrent condition (>4A) is detected.
+- **Historical Data Storage**: Enables tracking of energy consumption over time for analysis.
+- **Overload Protection**: Prevents excessive power consumption and ensures device safety.
 
-## System Model
-### Block Diagram
-- **Current Measuring Sensor**: Uses ACS712 to monitor AC current in real-time.
-- **DC Power Supply**: Ensures stable operation of all components.
-- **Indicator System**: Provides visual feedback on system status.
-- **Microcontroller (ATMEGA328P)**: Acts as the central processing unit, handling data collection and control logic.
+## System Components
+- **ACS712 Current Sensor**: Measures the alternating current (AC) flow.
+- **ATMEGA328P Microcontroller**: Processes sensor data and ensures efficient data handling.
+- **16x2 LCD Display**: Displays real-time current, power, and energy consumption.
+- **LED Indicators**: Shows system status (normal operation or overload condition).
+- **Buzzer**: Alerts users when overcurrent is detected (>4A).
+- **Stable Power Supply**: Ensures uninterrupted operation of all components.
 
-### Flowchart Logic
-1. System initializes and displays a welcome message.
-2. Continuously measures current, voltage, and power consumption.
-3. Displays real-time values on the LCD.
-4. Checks if the current exceeds 4A.
-   - If **Yes**, activates a red LED indicating an overload condition.
-   - If **No**, keeps the green LED on to signal normal operation.
-5. Loops back to update and monitor energy usage continuously.
+## System Flow
+1. The system starts with an initial welcome message displayed on the LCD.
+2. The current sensor measures AC flow in real-time.
+3. The microcontroller calculates power and energy usage based on measured values.
+4. If the measured current exceeds 4A, the system activates a buzzer and a red LED indicator for overload warning.
+5. If the current remains within the safe limit, the green LED remains active.
+6. The system continuously updates real-time values and monitors power consumption.
 
-## Equations Used
-- **Power Calculation**:  
-  \[ P = V \times I \]
-- **Energy Calculation**:  
-  \[ E = P \times \Delta T \]
-
-## Components Used
-- **ACS712 Current Sensor**
-- **ATMEGA328P Microcontroller**
-- **16x2 LCD Display**
-- **LED Indicators (Green & Red)**
-- **Relay Module (for switching control)**
-- **Power Supply Unit**
+## Power and Energy Calculation
+- **Power (P)** = Voltage (V) × Current (I)
+- **Energy (E)** = Power (P) × Time (ΔT)
 
 ## Installation & Usage
-1. **Hardware Setup**:
-   - Connect ACS712 to measure the current.
-   - Integrate the microcontroller to process the readings.
-   - Attach the LCD display and LED indicators for real-time monitoring.
-   - Ensure a stable power supply for operation.
-2. **Software Setup**:
-   - Upload the Arduino code to the ATMEGA328P.
-   - Monitor real-time data via the LCD display.
-   - Use LED indicators to check for overload conditions.
+1. Connect the smart plug to a power source and the device to be monitored.
+2. Ensure the microcontroller and sensors are properly powered.
+3. Monitor energy consumption on the LCD display in real-time.
+4. Take action if an overload warning (LED and buzzer alert) is triggered.
+
+## Limitations
+- Requires stable internet connectivity for remote monitoring (if applicable).
+- Compatibility issues may arise with older appliances.
 
 ## Future Enhancements
-- **Integration with IoT Platforms**: Enable cloud-based monitoring and control.
-- **Mobile App Connectivity**: Provide a user-friendly mobile application for remote access.
-- **Machine Learning for Energy Optimization**: Implement predictive analytics to suggest energy-saving measures.
+- Integration with IoT platforms for remote monitoring and control.
+- Mobile app support for real-time data visualization.
+- AI-based analysis to predict and optimize energy consumption patterns.
+
+This system aims to enhance energy efficiency, reduce costs, and promote sustainable energy usage in households, offices, and industrial settings.
