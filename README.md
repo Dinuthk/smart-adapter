@@ -23,6 +23,9 @@ This project is a smart plug-based real-time energy monitoring system designed t
 - **Stable Power Supply**: Ensures uninterrupted operation of all components.
 
 ## System Flow
+
+![image](https://github.com/user-attachments/assets/7425fdcb-eef0-408f-b5f2-fb3968c4ee61)
+
 1. The system starts with an initial welcome message displayed on the LCD.
 2. The current sensor measures AC flow in real-time.
 3. The microcontroller calculates power and energy usage based on measured values.
@@ -48,5 +51,3 @@ This project is a smart plug-based real-time energy monitoring system designed t
 - Integration with IoT platforms for remote monitoring and control.
 - Mobile app support for real-time data visualization.
 - AI-based analysis to predict and optimize energy consumption patterns.
-
-This system aims to enhance energy efficiency, reduce costs, and promote sustainable energy usage in households, offices, and industrial settings.
